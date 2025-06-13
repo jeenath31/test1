@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container h1{
+    font-size: 30px;
+    color: white;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    list-style: none;
+    text-decoration: none;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+}
+
+.link{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+}
+
+.link:hover{
+    background-color: white;
+    color: rgb(2, 2, 2);
+    padding: 5px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+.bold{
+    font-weight: 900;
+}
+.task2{
+font-size: 20px;
+margin: 30px;
+}
+
+.italic{
+    font-style: italic;
+    font-weight: 200;
+
+}
+
+.strike{
+    text-decoration:line-through;
+}
+
+table, tr, td, th{
+    border: 2px solid ;
+    border-collapse: collapse;
+    padding: 10px;
+}
+table{
+margin: 10px;
+}
+
+form{
+    margin: 20px;
+}
+.list{
+    margin: 30px;
+}
+ol{
+    list-style: upper-alpha;
+}
+ul{
+    list-style: square;
+}
+
+.card-content{
+    
+    width: 200px;
+    padding: 20px;
+    height: auto;
+    border: 2px solid;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 2px 20px;
+
+}
+.card{
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+}
+.btn{
+    background-color:  rgb(241, 33, 57);
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    text-align: center;
+    width:100px;
+    position: absolute;
+    left: 70px;
+    z-index: 3;
+    bottom: 0px;
+    padding:5px  ;
+
+}
+.card-text{
+    color: rgb(241, 33, 57);
+    font-size: 30px;
+}
+
+.flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:transparent;
+    backdrop-filter: blur(8px);
+    flex-wrap: wrap;
+
+}
+
+.flex-text{
+    text-decoration:underline ;
+    text-decoration-color: rgb(240, 56, 86);
+    text-align: center;
+}
+
+.output6{
+    padding: 10px;
+    background-color: antiquewhite;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.output7{
+    background-color: blanchedalmond;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    position: relative;
+    align-items: center;justify-content: center;
+    margin: 10px;
+    border: 2px solid ;
+    border-radius: 20px;
+    animation: move 5s ease infinite;
+
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(200px);
+        background-color: aqua;
+    }
+    
+}
+
+.output8{
+     background-color: blanchedalmond;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+   
+    align-items: center;justify-content: center;
+    margin: 50px;
+    margin-left: 50px;
+    border: 2px solid ;
+    border-radius: 20px;
+    transition: transform 2s ease;
+
+
+}
+
+.output8:hover{
+    transform: scale(1.2) rotate(10deg);
+}
+
+.output9{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    animation: col 8s linear infinite;
+}
+
+@keyframes col {
+    0%{
+        background-color: red;
+    }
+
+    35%{
+        background-color: yellow;
+    }
+
+    70%{
+        background-color: blue;
+    }
+
+    100%{
+        background-color: green;
+    }
+    
+}
+
+video{
+    margin: 20px;
+    object-fit: cover;
+}
+
+audio{
+    margin: 20px;
+}
+
+.main{
+    width: 90vw;
+    height: 50vh;
+    background-color: blanchedalmond;
+    margin: auto;
+}
+/* Mobile-first: 
+○ Width: 100% 
+○ Text aligned center, font size: 14px 
+○ No shadow 
+● ≥ 600px: 
+○ Width: 80%, font size: 16px 
+○ Box shadow + hover effect (translateY) 
+● ≥ 900px: 
+○ Flex layout with an .image-section 
+○ Card: 70%, Image: 30% 
+/* ○ Font size: 18px, border-radius: 10px */
+ 
+.cards{
+    background-color: black;
+    color: white;
+
+    height: 80%;
+}
+
+@media screen and (max-width:600px) {
+   .cards{width: 100%;
+    height: 80%;
+    text-align: center;
+    font-size: 14px;
+
+   }
+    
+}
+
+@media screen and (min-width:600px) {
+   .cards{width: 80%;
+    height: 80%;
+    text-align: center;
+    font-size: 16px;
+    color: aquamarine;
+    box-shadow: 10px 10px 10px rgb(224, 4, 4);
+
+   }
+   .cards:hover{
+    box-shadow: 10px 10px 10px red;
+    transform:translateY(10px);
+   }
+    
+}
+@media screen and (min-width:900px) {
+   .cards{width: 70%;
+    height: 80%;
+    text-align: center;
+    color: brown;
+    font-size: 18px;
+    border-radius: 10px;
+
+   }
+   .img{
+    width: 30%;
+    height: 50%;
+    
+   }
+    
+}
+
+
+
+.img{
+    height: 100px;
+    width: 200px;
+    
+}
+
+.parent1{
+    height: 200vh;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+    display: flex;
+  padding-top: 200px;
+    justify-content: center;
+
+}
+
+.parent2{
+    background-color: bisque;
+    height: 80vh;
+    width: 80%;
+    z-index: 2;
+    position: relative;
+}
+
+.sticky{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    position: sticky;
+    top:50px;
+    left: 20px;
+    background-color: brown;
+    color: white;
+}
+
+.output14 li:nth-child(3n){
+    list-style: none;
+    color: blue;
+}
+.output14{
+    margin: 30px;
+}
